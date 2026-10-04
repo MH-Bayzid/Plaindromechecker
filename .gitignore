@@ -1,0 +1,16 @@
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/sites/*/files/
+/web/sites/*/settings*.php
+/web/sites/*/services*.yml
+/work/
+/data/
+/runtime/
+/LOGIN.txt
+.env
+.env.*
+*.sqlite
+*.sqlite3

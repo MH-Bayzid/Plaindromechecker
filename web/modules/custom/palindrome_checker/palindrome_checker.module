@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Help text for the Palindrome Checker module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function palindrome_checker_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name === 'help.page.palindrome_checker') {
+    return [
+      '#markup' => '<h2>' . t('About') . '</h2><p>' . t('Palindrome Checker checks whether a word or phrase reads the same forwards and backwards.') . '</p><h2>' . t('How to use it') . '</h2><p>' . t('Open the <a href=":url">palindrome checker</a>, enter a word or phrase, and press Check. For example, level is a palindrome and Drupal is not.', [':url' => Url::fromRoute('palindrome_checker.form')->toString()]) . '</p><p>' . t('Capital letters, spaces and punctuation are ignored. Letters and numbers are compared. Empty input or input containing only symbols is rejected. Text is checked without being saved to the database.') . '</p>',
+    ];
+  }
+}

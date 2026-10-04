@@ -1,0 +1,6 @@
+palindrome_checker.form:
+  title: 'Palindrome checker'
+  description: 'Check a word or phrase.'
+  route_name: palindrome_checker.form
+  menu_name: main
+  weight: 5
