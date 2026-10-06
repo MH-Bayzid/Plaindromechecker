@@ -25,25 +25,3 @@ lando drush en palindrome_checker -y
 lando drush config:set system.site page.front /palindrome -y
 lando drush cr
 ```
-
-`site:install` replaces the selected database, so do not run it again on an installed site. Use `lando drush uli` to log in as administrator.
-
-Open http://palindrome-task2.lndo.site/palindrome. Use `lando stop` to stop the project and `lando start` to run it again.
-
-## Module
-
-The code is in `web/modules/custom/palindrome_checker`:
-
-- `palindrome_checker.info.yml` defines the module.
-- `palindrome_checker.routing.yml` adds the `/palindrome` page.
-- `palindrome_checker.links.menu.yml` adds a menu link.
-- `src/Form/PalindromeForm.php` handles the form, validation and result.
-- `palindrome_checker.module` provides `hook_help()` at `/admin/help/palindrome_checker`.
-
-The form uses Drupal's Form API. No custom JavaScript or theme is needed.
-
-## References
-
-- [Drupal module development](https://www.drupal.org/docs/develop/creating-modules)
-- [Form API](https://www.drupal.org/docs/drupal-apis/form-api/introduction-to-form-api)
-- [hook_help()](https://api.drupal.org/api/drupal/core%21modules%21help%21help.api.php/function/hook_help/11.x)
